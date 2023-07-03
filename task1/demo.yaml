@@ -1,0 +1,10 @@
+---
+- name: Cretae user in AWS Ec2 Linux
+  hosts: ec2
+  become: yes
+  become_user: root
+  tasks:
+    - name: Create user in linux
+      ansible.builtin.user:
+        name: demouser
+        password: Demouser
